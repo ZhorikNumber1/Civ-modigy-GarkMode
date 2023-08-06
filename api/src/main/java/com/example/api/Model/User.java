@@ -1,6 +1,7 @@
 package com.example.api.Model;
 
 import jakarta.persistence.*;
+import org.springframework.http.HttpStatus;
 
 @Entity
 @Table(name = "Users")
@@ -8,12 +9,13 @@ public class User {
     public  User(){
 
     }
-    public User(String first_name, String last_Name, String nickname, String nmberPhone) {
+    public User(String first_name, String last_Name, String nickname, String nmberPhone, String password) {
         super();
         First_name = first_name;
         Last_Name = last_Name;
         Nickname = nickname;
         NmberPhone = nmberPhone;
+        Password = password;
     }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +28,18 @@ public class User {
     private String Nickname;
     @Column(name = "NmberPhone")
     private String NmberPhone;
+    @Column(name = "Password")
+    private String Password;
+
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
+
 
     public long getId() {
         return id;

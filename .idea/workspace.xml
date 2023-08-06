@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5fb1ae65-1d51-43a9-895c-301a56ea16de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Simple-CRUD-java-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/example/api/ApiApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/example/api/ApiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/example/api/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/example/api/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/example/api/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/example/api/Model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +27,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/Simple-CRUD-java-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -50,6 +46,7 @@
       <updated>1691080928755</updated>
       <workItem from="1691080931249" duration="95000" />
       <workItem from="1691081499836" duration="163000" />
+      <workItem from="1691329131401" duration="692000" />
     </task>
     <servers />
   </component>
