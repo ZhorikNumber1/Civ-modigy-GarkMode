@@ -1,1 +1,1 @@
-# Beckend website to help develop mods CiV 6\
+# Beckend website to help develop mods CiV 6
