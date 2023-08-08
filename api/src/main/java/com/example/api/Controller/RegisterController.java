@@ -1,7 +1,7 @@
 package com.example.api.Controller;
 
-import com.example.api.Model.Unit;
-import com.example.api.Repository.unitRepository;
+import com.example.api.Model.Units;
+import com.example.api.Repository.unitsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/security")
 public class RegisterController {
     @Autowired
-    private unitRepository unitRepository;
+    private unitsRepository unitsRepository;
     @PostMapping("/register")
-    public boolean newUnit(@RequestBody Unit unit){
-        unitRepository.save(unit);
+    public boolean newUnit(@RequestBody Units unit){
+        unitsRepository.save(unit);
         return true;
     }
 }

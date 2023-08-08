@@ -1,0 +1,1 @@
+INSERT INTO Units (unit_type, cost) values ("fghjfg", 20);
