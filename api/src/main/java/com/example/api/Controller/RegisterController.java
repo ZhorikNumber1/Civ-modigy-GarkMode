@@ -1,8 +1,7 @@
 package com.example.api.Controller;
 
-import com.example.api.Model.User;
-import com.example.api.Repository.userRepository;
-import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.example.api.Model.Unit;
+import com.example.api.Repository.unitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/security")
 public class RegisterController {
     @Autowired
-    private userRepository UserRepository;
+    private unitRepository unitRepository;
     @PostMapping("/register")
-    public boolean newUser(@RequestBody User user){
-        UserRepository.save(user);
+    public boolean newUnit(@RequestBody Unit unit){
+        unitRepository.save(unit);
         return true;
     }
 }
