@@ -1,5 +1,3 @@
-DELETE FROM Units;
-INSERT INTO Units (name, name_photo)
-values ("Строитель", "Builder_(Civ6).png"),
-       ("Поселенец", "Settler_(Civ6).png"),
-       ("Археолог", "Archaeologist_(Civ6).png");
+DELETE FROM Units_civilian;
+INSERT INTO Units_civilian  (name_photo,            cost, base_moves, Name,       id)
+values                      ("Settler_(Civ6).png",  120, 3,          "Поселенец", 2);
