@@ -1,19 +1,19 @@
-    <?xml version="1.0" encoding="utf-8"?>
-<Mod id="0f042035-e077-2df9-d178-c9d66e9db5ad" version="1">
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="95ea38fd-aa57-d6ed-4176-ce96be0f765b" version="1">
 	<Properties>
 		<Name>[COLOR_Red]CivModify:[ENDCOLOR]VanyaChyrkaEbannay</Name>
 		<Description>Описание</Description>
-		<Created>1692105863</Created>
+		<Created>1692115564</Created>
 		<Teaser>VanyaChyrkaEbannay</Teaser>
 		<Authors>CivModify, Pavel_Zharkov</Authors>
 		<CompatibleVersions>1.2,2.0</CompatibleVersions>
 	</Properties>
 	<InGameActions>
-		<UpdateDatabase id="0f042035-e077-2df9-d178-c9d66e9db5ad">
-			<File>ПоселенецVanyaChyrkaEbannay.sql</File>
+		<UpdateDatabase id="95ea38fd-aa57-d6ed-4176-ce96be0f765b">
+			<File>ПоселенецVanyaChyrkaEbannay.xml</File>
 		</UpdateDatabase>
 	</InGameActions>
 	<Files>
-			<File>ПоселенецVanyaChyrkaEbannay.sql</File>
+			<File>ПоселенецVanyaChyrkaEbannay.xml</File>
 	</Files>
 </Mod>

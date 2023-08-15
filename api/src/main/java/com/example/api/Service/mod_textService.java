@@ -2,9 +2,7 @@ package com.example.api.Service;
 
 import com.example.api.Model.UnitsDTO.Units_cvilianDto;
 import com.example.api.Model.Units_civilian;
-import com.example.api.Repository.unitsRepository;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -56,22 +54,30 @@ public interface mod_textService {
         String Title = captionXML + nameXML + descriptionXML + dataXML + teaserXML + authorXML + CompatibleVersionsXML + PropertiesXML;
         return Title + mod_textService.inGameActions(idXML, unitsCvilianDto);
     }
-    public static String sqlDBFile(Units_cvilianDto unitsCvilianDto,  Optional<Units_civilian> exsting_Unit){
-        String finalSqltext = "";
+    public static String xmlDBFile(Units_cvilianDto unitsCvilianDto, Optional<Units_civilian> exsting_Unit){
+        String title = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
+        String finalXmltext = "<GameData>\n" +
+                "\t<Units>\n" +
+                "\t\t<Update>\n" +
+                "\t\t\t<Where UnitType=\""+unitsCvilianDto.getUnit_Type()+"\" />\n" +
+                "\t\t\t<Set ";
+        String endTextXml = "\t\t</Update>\n" +
+                "\t</Units>\n" +
+                "</GameData>";
         if(exsting_Unit.get().getCost() != unitsCvilianDto.getCost()){
-             finalSqltext+="UPDATE Units WHERE UnitType='"+unitsCvilianDto.getUnit_Type() +"' SET Cost = "+unitsCvilianDto.getCost()+";\n";
+             finalXmltext+="Cost =\""+unitsCvilianDto.getCost()+"\" ";
         }
         if(exsting_Unit.get().getBaseMoves() != unitsCvilianDto.getBaseMoves()){
-            finalSqltext+="UPDATE Units WHERE UnitType='"+unitsCvilianDto.getUnit_Type() +"' SET BaseMoves = "+unitsCvilianDto.getBaseMoves()+";\n";
+            finalXmltext+="BaseMoves =\""+unitsCvilianDto.getBaseMoves()+"\" ";
         }
-        return finalSqltext;
+        return title+finalXmltext+"/>\n"+endTextXml;
     }
 
     public static String inGameActions(String id, Units_cvilianDto unitsCvilianDto) {
         String openTegXML = "\n\t<InGameActions>";
         String closeTegXML = "\n\t</InGameActions>";
         String updateDatabaseXML = "\n\t\t<UpdateDatabase id=\"" + id + "\">";
-        String fileXML = "\n\t\t\t<File>" + unitsCvilianDto.getName() + unitsCvilianDto.getNameMod() + ".sql</File>";
+        String fileXML = "\n\t\t\t<File>" + unitsCvilianDto.getName() + unitsCvilianDto.getNameMod() + ".xml</File>";
         String updateDatabaseCloseXML = "\n\t\t</UpdateDatabase>";
         String openfilestagXML = "\n\t<Files>";
         String closefilestagXML = "\n\t</Files>";

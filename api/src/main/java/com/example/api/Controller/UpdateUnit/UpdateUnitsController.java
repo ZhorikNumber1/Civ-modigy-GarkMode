@@ -27,12 +27,12 @@ public class UpdateUnitsController {
         Optional<Units_civilian> exsting_Unit = unitsRepository.findById(unit_Update.getId());
 
         user_modService.createModFolder(unit_Update.getNameMod());
-        user_modService.createModInfoFile(unit_Update.getNameMod());
-        user_modService.createSQLFile(unit_Update.getNameMod(), unit_Update);
+        //user_modService.createModInfoFile(unit_Update.getNameMod());
+        //user_modService.createSQLFile(unit_Update.getNameMod(), unit_Update);
         String folderPath = "E:\\Simple-CRUD-java-app\\api\\Mods\\" + unit_Update.getNameMod();
 
         user_modService.addTexttoModInfoFile(mod_textService.modInfoFile(unit_Update), "E:\\Simple-CRUD-java-app\\api\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getNameMod() + ".modinfo");
-        user_modService.addTexttoModInfoFile(mod_textService.sqlDBFile(unit_Update, exsting_Unit), "E:\\Simple-CRUD-java-app\\api\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getName() + unit_Update.getNameMod() + ".sql");
+        user_modService.addTexttoModInfoFile(mod_textService.xmlDBFile(unit_Update, exsting_Unit), "E:\\Simple-CRUD-java-app\\api\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getName() + unit_Update.getNameMod() + ".xml");
         user_modService.archiveFolder(folderPath);
         String modInfoFile = mod_textService.modInfoFile(unit_Update);
         return modInfoFile;
