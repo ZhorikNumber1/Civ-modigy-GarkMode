@@ -1,7 +1,8 @@
 package com.example.api.Controller.UpdateUnit;
 
-import com.example.api.Model.UnitsDTO.Units_cvilianDto;
+import com.example.api.Model.UnitsDTO.UnitsDTO;
 import com.example.api.Model.Units_civilian;
+import com.example.api.Model.UnitsDTO.Units_cvilianDto;
 import com.example.api.Repository.unitsRepository;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -27,24 +28,28 @@ public class GetUnitsController {
     private unitsRepository unitsRepository;
 
     @GetMapping("/units")
-    public List<Units_cvilianDto> getData() throws IOException {
+    public List<UnitsDTO> getData() throws IOException {
         List<Units_civilian> units = unitsRepository.findAll();
-        List<Units_cvilianDto> unitsCvilianDtoList = new ArrayList<>();
+        List<UnitsDTO> unitsCvilianDtoList = new ArrayList<>();
         for (Units_civilian unit : units) {
-            File imageFile = new File(PHOTO_DIRECTORY+unit.getNamePhoto());
+            File imageFile = new File(PHOTO_DIRECTORY + unit.getNamePhoto());
             byte[] urlPhoto = Files.readAllBytes(imageFile.toPath());
-            //Units_cvilianDto dto = new Units_cvilianDto(unit.getName(), unit.getNamePhoto(), urlPhoto);
-            //unitsCvilianDtoList.add(dto);
+            UnitsDTO dto = new UnitsDTO(unit.getName(), urlPhoto, unit.getUnitType());
+            unitsCvilianDtoList.add(dto);
         }
         return unitsCvilianDtoList;
     }
 
- /* @GetMapping(value = "/Unit/{id}")
-    public UnitsDto getUnit(@PathVariable("id") long id) throws ChangeSetPersister.NotFoundException {
-        Units unit = unitsRepository.findById(id);
+    @GetMapping("/units/{name}")
+    public Units_cvilianDto getUnitsbyname(@PathVariable String name) throws IOException {
+        Units_civilian units;
+        units = unitsRepository.findByName(name);
+        File imageFile = new File(PHOTO_DIRECTORY + units.getNamePhoto());
+        byte[] urlPhoto = Files.readAllBytes(imageFile.toPath());
+        Units_cvilianDto dto = new Units_cvilianDto(units.getName(), units.getBaseMoves(), units.getCost(), units.getMaintenance(), urlPhoto, units.getPrereqTech(), units.getCombat(), units.getId());
+        return dto;
+    }
 
-        return new UnitsDto(unit.getName(), unit.getNamePhoto());
-    }*/
     @GetMapping("/{photoName}")
     public ResponseEntity<Resource> getPhoto(@PathVariable String photoName) throws IOException {
         Path photoPath = Paths.get(PHOTO_DIRECTORY).resolve(photoName);
@@ -52,7 +57,7 @@ public class GetUnitsController {
 
         if (resource.exists()) {
             return ResponseEntity.ok()
-                    .contentType(MediaType.IMAGE_PNG) // или MediaType.IMAGE_PNG в зависимости от типа изображения
+                    .contentType(MediaType.IMAGE_PNG)
                     .body(resource);
         } else {
             return ResponseEntity.notFound().build();

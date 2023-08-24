@@ -19,6 +19,7 @@ public class Units_civilian {
         this.name = name;
         this.description = description;
         PrereqTech = prereqTech;
+        this.Combat = combat;
     }
 
     @Id
@@ -41,6 +42,18 @@ public class Units_civilian {
     private String description;
     @Column(name = "prereq_tech", nullable = false, columnDefinition = "VARCHAR(255) DEFAULT '-1'")
     private String PrereqTech;
+    @Column(name = "combat", columnDefinition = "int default -1")
+    private int Combat;
+
+
+
+    public int getCombat() {
+        return Combat;
+    }
+
+    public void setCombat(int combat) {
+        Combat = combat;
+    }
 
     public String getUnitType() {
         return UnitType;

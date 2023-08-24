@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="f72deaff-c84f-ffc7-bbd4-d52b1e12d141" version="1">
+	<Properties>
+		<Name>[COLOR_Red]CivModify:[ENDCOLOR]ModTest</Name>
+		<Description>Описание</Description>
+		<Created>1692838813</Created>
+		<Teaser>ModTest</Teaser>
+		<Authors>CivModify, Pavel_Zharkov</Authors>
+		<CompatibleVersions>1.2,2.0</CompatibleVersions>
+	</Properties>
+	<InGameActions>
+		<UpdateDatabase id="f72deaff-c84f-ffc7-bbd4-d52b1e12d141">
+			<File>ПоселенецModTest.xml</File>
+		</UpdateDatabase>
+	</InGameActions>
+	<Files>
+			<File>ПоселенецModTest.xml</File>
+	</Files>
+</Mod>

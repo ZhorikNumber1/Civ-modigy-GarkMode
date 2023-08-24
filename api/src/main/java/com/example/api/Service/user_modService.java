@@ -8,28 +8,26 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
+
 @Service
 public interface user_modService {
-    public static void createModInfoFile(String nameMod) throws IOException {
-        String filepath = "E:\\Simple-CRUD-java-app\\api\\Mods\\" + nameMod + "\\" + nameMod + ".modinfo";
-        File file_modinfo = new File(filepath);
-        file_modinfo.createNewFile();
-    }
-    public static void createModFolder(String nameMod) throws IOException{
+    public static void createModFolder(String nameMod) throws IOException {
         String path_to_directory = "E:\\Simple-CRUD-java-app\\api\\Mods\\" + nameMod;
         File folder = new File(path_to_directory);
         if (!folder.exists()) {
             folder.mkdirs();
         }
     }
+
     public static void archiveFolder(String folderPath) throws IOException {
         File folder = new File(folderPath);
-        String zipFilePath = folderPath + "zip.zip";
+        String zipFilePath = folderPath + ".zip";
 
         try (ZipArchiveOutputStream zipOut = new ZipArchiveOutputStream(new FileOutputStream(zipFilePath))) {
             addFileToZip(folder, folder.getName(), zipOut);
         }
     }
+
     private static void addFileToZip(File file, String fileName, ZipArchiveOutputStream zipOut) throws IOException {
         ZipArchiveEntry entry = new ZipArchiveEntry(file, fileName);
         zipOut.putArchiveEntry(entry);
@@ -47,7 +45,8 @@ public interface user_modService {
             }
         }
     }
-    public static void addTexttoModInfoFile(String text, String filepath){
+
+    public static void addTexttoModInfoFile(String text, String filepath) {
         FileSystemResource resource = new FileSystemResource(filepath);
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(resource.getFile(), false))) {
             // Добавьте текст в файл
@@ -55,10 +54,5 @@ public interface user_modService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    public static void createSQLFile(String nameMod, Units_cvilianDto unitsCvilianDto) throws IOException {
-        String filepath = "E:\\Simple-CRUD-java-app\\api\\Mods\\" + nameMod + "\\" + unitsCvilianDto.getName() + unitsCvilianDto.getNameMod() + ".sql";
-        File file_modinfo = new File(filepath);
-        file_modinfo.createNewFile();
     }
 }

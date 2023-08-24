@@ -2,8 +2,8 @@
 <GameData>
 	<Units>
 		<Update>
-			<Where UnitType="UNIT_SETTLER" />
-			<Set Cost ="80" BaseMoves ="4" />
+			<Where UnitType="null" />
+			<Set Combat ="0" Cost ="123" BaseMoves ="123" />
 		</Update>
 	</Units>
 </GameData>

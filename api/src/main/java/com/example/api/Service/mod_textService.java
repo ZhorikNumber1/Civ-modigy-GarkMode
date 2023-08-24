@@ -1,6 +1,6 @@
 package com.example.api.Service;
 
-import com.example.api.Model.UnitsDTO.Units_cvilianDto;
+import com.example.api.Model.Mods_units;
 import com.example.api.Model.Units_civilian;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Service;
@@ -37,7 +37,7 @@ public interface mod_textService {
         return stringid.toString();
     }
 
-    public static String modInfoFile(Units_cvilianDto unitsCvilianDto) {
+    public static String modInfoFile_text(Mods_units unitsCvilianDto) {
         Date datamod_let = new Date();
         long datamod = datamod_let.getTime() / 1000;
         String idXML = mod_textService.getId();
@@ -54,26 +54,29 @@ public interface mod_textService {
         String Title = captionXML + nameXML + descriptionXML + dataXML + teaserXML + authorXML + CompatibleVersionsXML + PropertiesXML;
         return Title + mod_textService.inGameActions(idXML, unitsCvilianDto);
     }
-    public static String xmlDBFile(Units_cvilianDto unitsCvilianDto, Optional<Units_civilian> exsting_Unit){
+    public static String xmlDBFile(Mods_units modsUnits, Optional<Units_civilian> exsting_Unit){
         String title = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
         String finalXmltext = "<GameData>\n" +
                 "\t<Units>\n" +
                 "\t\t<Update>\n" +
-                "\t\t\t<Where UnitType=\""+unitsCvilianDto.getUnit_Type()+"\" />\n" +
+                "\t\t\t<Where UnitType=\""+modsUnits.getUnitType()+"\" />\n" +
                 "\t\t\t<Set ";
         String endTextXml = "\t\t</Update>\n" +
                 "\t</Units>\n" +
                 "</GameData>";
-        if(exsting_Unit.get().getCost() != unitsCvilianDto.getCost()){
-             finalXmltext+="Cost =\""+unitsCvilianDto.getCost()+"\" ";
+        if(exsting_Unit.get().getCombat() != modsUnits.getCombat()){
+            finalXmltext+="Combat =\""+modsUnits.getCombat()+"\" ";
         }
-        if(exsting_Unit.get().getBaseMoves() != unitsCvilianDto.getBaseMoves()){
-            finalXmltext+="BaseMoves =\""+unitsCvilianDto.getBaseMoves()+"\" ";
+        if(exsting_Unit.get().getCost() != modsUnits.getCost()){
+             finalXmltext+="Cost =\""+modsUnits.getCost()+"\" ";
+        }
+        if(exsting_Unit.get().getBaseMoves() != modsUnits.getBaseMoves()){
+            finalXmltext+="BaseMoves =\""+modsUnits.getBaseMoves()+"\" ";
         }
         return title+finalXmltext+"/>\n"+endTextXml;
     }
 
-    public static String inGameActions(String id, Units_cvilianDto unitsCvilianDto) {
+    public static String inGameActions(String id, Mods_units unitsCvilianDto) {
         String openTegXML = "\n\t<InGameActions>";
         String closeTegXML = "\n\t</InGameActions>";
         String updateDatabaseXML = "\n\t\t<UpdateDatabase id=\"" + id + "\">";
