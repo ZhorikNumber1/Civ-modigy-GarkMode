@@ -14,7 +14,7 @@ public class Units_cvilianDto {
     private int maintenance;
     private String prereqTech;
     private int Combat;
-    public Units_cvilianDto(String name, int baseMoves, int cost, int maintenance, byte[] urlPhoto, String prereqTech, int combat, long id) {
+    public Units_cvilianDto(String name, int baseMoves, int cost, int maintenance, byte[] urlPhoto, String prereqTech, int combat, long id, String unit_Type) {
         this.name = name;
         this.cost = cost;
         this.baseMoves = baseMoves;
@@ -23,6 +23,7 @@ public class Units_cvilianDto {
         this.prereqTech = prereqTech;
         this.Combat = combat;
         this.id = id;
+        this.Unit_Type = unit_Type;
     }
 
     public int getCombat() {

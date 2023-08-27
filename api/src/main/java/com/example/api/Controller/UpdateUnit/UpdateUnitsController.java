@@ -30,18 +30,16 @@ public class UpdateUnitsController {
         Optional<Units_civilian> exsting_Unit = unitsRepository.findById(unit_Update.getId());
         mod_unitsRepository.save(unit_Update);
         user_modService.createModFolder(unit_Update.getNameMod());
-        //user_modService.createModInfoFile(unit_Update.getNameMod());
-        //user_modService.createSQLFile(unit_Update.getNameMod(), unit_Update);
         String folderPath = "E:\\Simple-CRUD-java-app\\api\\Mods\\" + unit_Update.getNameMod();
 
         user_modService.addTexttoModInfoFile(mod_textService.modInfoFile_text(unit_Update), "E:\\Simple-CRUD-java-app\\api\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getNameMod() + ".modinfo");
-        user_modService.addTexttoModInfoFile(mod_textService.xmlDBFile(unit_Update, exsting_Unit), "E:\\Simple-CRUD-java-app\\api\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getName() + unit_Update.getNameMod() + ".xml");
+        user_modService.addTexttoModInfoFile(mod_textService.xmlDBFile_inGameActions(unit_Update, exsting_Unit), "E:\\Simple-CRUD-java-app\\api\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getName() + unit_Update.getNameMod() + ".xml");
         user_modService.archiveFolder(folderPath);
         String modInfoFile = mod_textService.modInfoFile_text(unit_Update);
         return unit_Update.getNameMod();
     }
-    @GetMapping("/dowland/{nameMod}")
-    public ResponseEntity<Resource> dowlandMod(@PathVariable String nameMod){
+    @GetMapping("/downloadMod/{nameMod}")
+    public ResponseEntity<Resource> downloadMod(@PathVariable String nameMod){
         File modFile = new File("E:\\Simple-CRUD-java-app\\api\\Mods\\zipFiles\\" + nameMod + ".zip");
         Resource resource = new FileSystemResource(modFile);
         String contentType = "application/zip";

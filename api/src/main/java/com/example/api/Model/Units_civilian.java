@@ -44,7 +44,8 @@ public class Units_civilian {
     private String PrereqTech;
     @Column(name = "combat", columnDefinition = "int default -1")
     private int Combat;
-
+    @Column(name = "ranged_combat", columnDefinition = "int default -1")
+    private int RangedCombat;
 
 
     public int getCombat() {

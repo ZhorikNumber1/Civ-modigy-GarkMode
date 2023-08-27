@@ -37,7 +37,7 @@ public interface mod_textService {
         return stringid.toString();
     }
 
-    public static String modInfoFile_text(Mods_units unitsCvilianDto) {
+    static String modInfoFile_text(Mods_units unitsCvilianDto) {
         Date datamod_let = new Date();
         long datamod = datamod_let.getTime() / 1000;
         String idXML = mod_textService.getId();
@@ -54,7 +54,7 @@ public interface mod_textService {
         String Title = captionXML + nameXML + descriptionXML + dataXML + teaserXML + authorXML + CompatibleVersionsXML + PropertiesXML;
         return Title + mod_textService.inGameActions(idXML, unitsCvilianDto);
     }
-    public static String xmlDBFile(Mods_units modsUnits, Optional<Units_civilian> exsting_Unit){
+    static String xmlDBFile_inGameActions(Mods_units modsUnits, Optional<Units_civilian> exsting_Unit){
         String title = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
         String finalXmltext = "<GameData>\n" +
                 "\t<Units>\n" +
@@ -76,7 +76,7 @@ public interface mod_textService {
         return title+finalXmltext+"/>\n"+endTextXml;
     }
 
-    public static String inGameActions(String id, Mods_units unitsCvilianDto) {
+    static String inGameActions(String id, Mods_units unitsCvilianDto) {
         String openTegXML = "\n\t<InGameActions>";
         String closeTegXML = "\n\t</InGameActions>";
         String updateDatabaseXML = "\n\t\t<UpdateDatabase id=\"" + id + "\">";

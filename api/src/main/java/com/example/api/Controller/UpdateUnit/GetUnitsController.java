@@ -46,7 +46,7 @@ public class GetUnitsController {
         units = unitsRepository.findByName(name);
         File imageFile = new File(PHOTO_DIRECTORY + units.getNamePhoto());
         byte[] urlPhoto = Files.readAllBytes(imageFile.toPath());
-        Units_cvilianDto dto = new Units_cvilianDto(units.getName(), units.getBaseMoves(), units.getCost(), units.getMaintenance(), urlPhoto, units.getPrereqTech(), units.getCombat(), units.getId());
+        Units_cvilianDto dto = new Units_cvilianDto(units.getName(), units.getBaseMoves(), units.getCost(), units.getMaintenance(), urlPhoto, units.getPrereqTech(), units.getCombat(), units.getId(), units.getUnitType());
         return dto;
     }
 

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<GameData>
-	<Units>
-		<Update>
-			<Where UnitType="null" />
-			<Set Combat ="0" Cost ="123" BaseMoves ="123" />
-		</Update>
-	</Units>
-</GameData>
