@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dbCiv
+    username: root
+    password: 123
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    baseline-on-migrate: true
+
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: create
+
+server:
+  servlet:
+    context-path: /api/v1
+flyway:
+  url: jdbc:postgresql://localhost:5432/dbCiv
+  user: root
+  password: 123

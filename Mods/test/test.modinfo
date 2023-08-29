@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="a9837f0d-5e2c-0810-9544-3d95292e8e7c" version="1">
+	<Properties>
+		<Name>[COLOR_Red]CivModify:[ENDCOLOR]test</Name>
+		<Description>test</Description>
+		<Created>1693317642</Created>
+		<Teaser>test</Teaser>
+		<Authors>CivModify, test</Authors>
+		<CompatibleVersions>1.2,2.0</CompatibleVersions>
+	</Properties>
+	<InGameActions>
+		<UpdateDatabase id="a9837f0d-5e2c-0810-9544-3d95292e8e7c">
+			<File>testtest.xml</File>
+		</UpdateDatabase>
+	</InGameActions>
+	<Files>
+			<File>testtest.xml</File>
+	</Files>
+</Mod>
