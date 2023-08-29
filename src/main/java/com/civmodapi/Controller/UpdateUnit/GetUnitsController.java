@@ -1,8 +1,8 @@
 package com.civmodapi.Controller.UpdateUnit;
 
-import com.civmodapi.Model.UnitsDTO.UnitsDTO;
+import com.civmodapi.DTOs.UnitsDTO;
 import com.civmodapi.Model.Units_civilian;
-import com.civmodapi.Model.UnitsDTO.Units_cvilianDto;
+import com.civmodapi.DTOs.Units_cvilianDto;
 import com.civmodapi.Repository.unitsRepository;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -23,7 +23,7 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class GetUnitsController {
-    private static final String PHOTO_DIRECTORY = "E:\\CivModAPI\\src\\main\\java\\com\\civmodapi\\Img\\";
+    private static final String PHOTO_DIRECTORY = "E:\\Simple-CRUD-java-app\\src\\main\\java\\com\\civmodapi\\Img\\";
     @Autowired
     private unitsRepository unitsRepository;
 

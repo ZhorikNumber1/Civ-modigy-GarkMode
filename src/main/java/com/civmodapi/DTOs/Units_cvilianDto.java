@@ -1,4 +1,4 @@
-package com.civmodapi.Model.UnitsDTO;
+package com.civmodapi.DTOs;
 
 public class Units_cvilianDto {
     private String name;

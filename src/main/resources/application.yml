@@ -10,13 +10,10 @@ spring:
   jpa:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
-    hibernate:
-      ddl-auto: create
 
 server:
   servlet:
     context-path: /api/v1
-flyway:
-  url: jdbc:postgresql://localhost:5432/dbCiv
-  user: root
-  password: 123
+security:
+  basic:
+    enabled: false

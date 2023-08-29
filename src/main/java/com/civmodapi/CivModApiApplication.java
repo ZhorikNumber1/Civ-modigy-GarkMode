@@ -9,8 +9,12 @@ public class CivModApiApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CivModApiApplication.class, args);
-        Flyway flyway = Flyway.configure().load(); // Загрузка конфигурации из файла по умолчанию (flyway.yml)
-        flyway.migrate(); // Запуск миграций базы данных
+        Flyway flyway = Flyway.configure()
+                .dataSource("jdbc:postgresql://localhost:5432/dbCiv", "root", "123")
+                .schemas("public")
+                .locations("filesystem:E:/Simple-CRUD-java-app/src/main/resources/db/migration")
+                .load();
+        flyway.migrate();
 
     }
 

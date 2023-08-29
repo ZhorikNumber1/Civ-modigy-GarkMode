@@ -32,10 +32,10 @@ public class UpdateUnitsController {
         mod_unitsRepository.save(unit_Update);
 
         user_modService.createModFolder(unit_Update.getNameMod());
-        String folderPath = "E:\\CivModAPI\\Mods\\" + unit_Update.getNameMod();
+        String folderPath = "E:\\Simple-CRUD-java-app\\Mods\\" + unit_Update.getNameMod();
 
-        user_modService.addTextToModInfoFile(mod_textService.modInfoFile_text(unit_Update), "E:\\CivModAPI\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getNameMod() + ".modinfo");
-        user_modService.addTextToModInfoFile(mod_textService.xmlDBFile_inGameActions(unit_Update, exsting_Unit), "E:\\CivModAPI\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getName() + unit_Update.getNameMod() + ".xml");
+        user_modService.addTextToModInfoFile(mod_textService.modInfoFile_text(unit_Update), "E:\\Simple-CRUD-java-app\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getNameMod() + ".modinfo");
+        user_modService.addTextToModInfoFile(mod_textService.xmlDBFile_inGameActions(unit_Update, exsting_Unit), "E:\\Simple-CRUD-java-app\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getName() + unit_Update.getNameMod() + ".xml");
         user_modService.archiveFolder(folderPath);
         String modInfoFile = mod_textService.modInfoFile_text(unit_Update);
 
@@ -43,7 +43,7 @@ public class UpdateUnitsController {
     }
     @GetMapping("/downloadMod/{nameMod}")
     public ResponseEntity<Resource> downloadMod(@PathVariable String nameMod){
-        File modFile = new File("E:\\CivModAPI\\Mods\\zipFiles\\" + nameMod + ".zip");
+        File modFile = new File("E:\\Simple-CRUD-java-app\\Mods\\zipFiles\\" + nameMod + ".zip");
         Resource resource = new FileSystemResource(modFile);
         String contentType = "application/zip";
         return ResponseEntity.ok().

@@ -11,7 +11,7 @@ import java.io.*;
 @Service
 public interface user_modService {
     static void createModFolder(String nameMod) throws IOException {
-        String path_to_directory = "E:\\CivModAPI\\Mods\\" + nameMod;
+        String path_to_directory = "E:\\Simple-CRUD-java-app\\Mods\\" + nameMod;
         File folder = new File(path_to_directory);
         if (!folder.exists()) {
             folder.mkdirs();
