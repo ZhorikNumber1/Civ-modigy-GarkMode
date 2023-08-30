@@ -11,3 +11,5 @@ CREATE TABLE IF NOT EXISTS units_civilian (
                                           name_mod       VARCHAR(255),
                                           author         VARCHAR(255)
 );
+ALTER TABLE units_civilian ADD COLUMN combat INT DEFAULT -1;
+ALTER TABLE units_civilian ADD COLUMN ranged_combat INT DEFAULT -1;

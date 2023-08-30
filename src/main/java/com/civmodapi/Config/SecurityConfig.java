@@ -20,7 +20,7 @@ public class SecurityConfig {
         http.authorizeHttpRequests(
                 auth -> auth
                         .requestMatchers(HttpMethod.DELETE).hasAuthority("ADMIN")
-                        .requestMatchers("/api/v1/*").hasAuthority("USER"));
+                        .requestMatchers("/api/v1/**").hasAnyAuthority("ADMIN","USER"));
         return http.build();
 
     }
