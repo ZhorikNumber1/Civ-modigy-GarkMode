@@ -3,7 +3,7 @@ package com.civmodapi.Controller.UpdateUnit;
 import com.civmodapi.DTOs.UnitsDTO;
 import com.civmodapi.Model.Units_civilian;
 import com.civmodapi.DTOs.Units_cvilianDto;
-import com.civmodapi.Repository.unitsRepository;
+import com.civmodapi.Repository.UnitsRepository;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.MediaType;
@@ -25,7 +25,7 @@ import java.util.List;
 public class GetUnitsController {
     private static final String PHOTO_DIRECTORY = "E:\\Simple-CRUD-java-app\\src\\main\\java\\com\\civmodapi\\Img\\";
     @Autowired
-    private unitsRepository unitsRepository;
+    private UnitsRepository unitsRepository;
 
     @GetMapping("/units")
     public List<UnitsDTO> getData() throws IOException {

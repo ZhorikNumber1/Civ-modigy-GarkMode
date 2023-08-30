@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface mod_unitsRepository extends JpaRepository<Mods_units, Long> {
+public interface Mod_unitsRepository extends JpaRepository<Mods_units, Long> {
 }

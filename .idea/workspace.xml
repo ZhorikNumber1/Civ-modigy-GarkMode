@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f0fa301-7fc0-41bd-b421-e25d5db0793c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/DTOs/UserRequestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/RegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/GetUnitsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/GetUnitsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/UpdateUnitsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/UpdateUnitsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Model/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Model/User_Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1.2__insert_units_civilian.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1.2__insert_units_civilian.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_units_civilian_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_units_civilian_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2.1__table_users.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__create_table_users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/mod_unitsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/Mod_unitsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/unitsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/UnitsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/mod_textService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/mod_textService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/user_modService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/user_modService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,6 +81,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.civmodapi.DTOs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Simple-CRUD-java-app\src\main\resources\db" />
       <recent name="E:\Simple-CRUD-java-app" />
@@ -123,7 +130,8 @@
       <updated>1693251252016</updated>
       <workItem from="1693251253049" duration="4863000" />
       <workItem from="1693260531614" duration="15999000" />
-      <workItem from="1693335113622" duration="13774000" />
+      <workItem from="1693335113622" duration="18208000" />
+      <workItem from="1693405613444" duration="763000" />
     </task>
     <servers />
   </component>

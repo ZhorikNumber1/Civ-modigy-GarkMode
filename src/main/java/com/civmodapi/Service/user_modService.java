@@ -11,14 +11,17 @@ import java.io.*;
 @Service
 public interface user_modService {
     static void createModFolder(String nameMod) throws IOException {
+
         String path_to_directory = "E:\\Simple-CRUD-java-app\\Mods\\" + nameMod;
         File folder = new File(path_to_directory);
+
         if (!folder.exists()) {
             folder.mkdirs();
         }
     }
 
     static void archiveFolder(String folderPath) throws IOException {
+
         File folder = new File(folderPath);
         String zipFilePath = folderPath + ".zip";
 
@@ -45,11 +48,12 @@ public interface user_modService {
         }
     }
 
-    public static void addTextToModInfoFile(String text, String filepath) {
+    static void addTextToModInfoFile(String text, String filepath) {
         FileSystemResource resource = new FileSystemResource(filepath);
+
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(resource.getFile(), false))) {
-            // Добавьте текст в файл
             writer.write(text);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

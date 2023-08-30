@@ -2,8 +2,8 @@ package com.civmodapi.Controller.UpdateUnit;
 
 import com.civmodapi.Model.Mods_units;
 import com.civmodapi.Model.Units_civilian;
-import com.civmodapi.Repository.unitsRepository;
-import com.civmodapi.Repository.mod_unitsRepository;
+import com.civmodapi.Repository.UnitsRepository;
+import com.civmodapi.Repository.Mod_unitsRepository;
 import com.civmodapi.Service.mod_textService;
 import com.civmodapi.Service.user_modService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +22,9 @@ import java.util.Optional;
 @RestController
 public class UpdateUnitsController {
     @Autowired
-    private unitsRepository unitsRepository;
+    private UnitsRepository unitsRepository;
     @Autowired
-    private mod_unitsRepository mod_unitsRepository;
+    private Mod_unitsRepository mod_unitsRepository;
     @PostMapping(path = "/create_mod")
     public String create_mod(@RequestBody Mods_units unit_Update) throws IOException {
 

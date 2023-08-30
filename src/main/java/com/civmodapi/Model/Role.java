@@ -2,42 +2,46 @@ package com.civmodapi.Model;
 
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+import org.springframework.security.core.GrantedAuthority;
 
 
 @Entity
 @Table(name = "roles")
-public class Role {
-    @jakarta.persistence.Id
+public class Role implements GrantedAuthority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    @Column(name = "role_id")
+    private Long roleId;
+    private String authority;
 
-    @Column(name = "name")
-    private String name;
-
-    public Role() {
+    public Role(){
+        super();
     }
 
-    public Role(Long id, String name) {
-        this.id = id;
-        this.name = name;
+    public Role(String authority){
+        this.authority = authority;
     }
 
-    public Long getId() {
-        return id;
+    public Role(Long roleId, String authority){
+        this.roleId = roleId;
+        this.authority = authority;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    @Override
+    public String getAuthority() {
+        // TODO Auto-generated method stub
+        return this.authority;
     }
 
-    public String getName() {
-        return name;
+    public void setAuthority(String authority){
+        this.authority = authority;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Long getRoleId(){
+        return this.roleId;
+    }
+
+    public void setRoleId(Long roleId){
+        this.roleId = roleId;
     }
 }
