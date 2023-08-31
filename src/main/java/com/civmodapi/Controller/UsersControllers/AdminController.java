@@ -6,12 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/admin")
 @CrossOrigin("*")
-public class UserController {
-
-    @GetMapping("/user")
-    public String helloUserController(){
-        return "User access level";
-    }
+public class AdminController {
     
+    @GetMapping("/")
+    public String helloAdminController(){
+        return "Admin level access";
+    }
+
 }

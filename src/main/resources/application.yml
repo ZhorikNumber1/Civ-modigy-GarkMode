@@ -8,17 +8,12 @@ spring:
     baseline-on-migrate: true
   jpa:
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
-
-
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
 server:
   servlet:
     context-path: /api/v1
-security:
-  basic:
-    enabled: false
 jwt:
-    secret: 984hg493gh0439rthr0429uruj2309yh937gc763fe87t3f89723gf
-    lifetime: 10m
+    secret: 984hg493gh0439rthr0429uruj2309yh937gc763fe8asdasd7t3f89723gf
+    lifetime: 1000m
