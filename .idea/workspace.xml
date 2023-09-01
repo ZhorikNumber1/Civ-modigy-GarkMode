@@ -1,55 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fb1ae65-1d51-43a9-895c-301a56ea16de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Simple-CRUD-java-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/example/api/ApiApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/example/api/ApiApplicationTests.java" beforeDir="false" />
+    <list default="true" id="7f0fa301-7fc0-41bd-b421-e25d5db0793c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Config/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/DTOs/JwtResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Expection/AppError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/GetUnitsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/GetUnitsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/UpdateUnitsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/UpdateUnitsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/DTOs/RegistrationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/DTOs/RegistrationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/DTOs/Units_cvilianDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/DTOs/UnitsCvilianDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Model/Mods_units.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Model/ModsUnits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Model/Units_civilian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Model/UnitsCivilian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/Mod_unitsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/ModUnitsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/UnitsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Repository/UnitsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/TokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/mod_textService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/ModTextService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/user_modService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/UserModService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Utils/JwtTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Utils/JwtTokenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2TTxZD6fFUzVwz5CpvqEXnUCUCd" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2UcuaMGjadoHb0QeQ1dWOsPs2v7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;4fb77bf82d275bc154b0b5284f94b5e9&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.civmodapi.DTOs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Simple-CRUD-java-app\src\main\java\com\civmodapi\DTOs" />
+      <recent name="E:\Simple-CRUD-java-app\src\main\java\com\civmodapi\Utils" />
+      <recent name="E:\Simple-CRUD-java-app\src\main\java\com\civmodapi\Service" />
+      <recent name="E:\Simple-CRUD-java-app\src\main\java\com\civmodapi\Controller\UsersControllers" />
+      <recent name="E:\Simple-CRUD-java-app\src\main\resources\db" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CivModApiApplication">
+    <configuration name="initDB.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/database/initDB.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration name="CivModApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="CivModAPI" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.civmodapi.CivModApiApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.civmodapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.CivModApiApplication" />
+        <item itemvalue="Database Script.initDB.sql" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5fb1ae65-1d51-43a9-895c-301a56ea16de" name="Changes" comment="" />
-      <created>1691080928755</created>
+      <changelist id="7f0fa301-7fc0-41bd-b421-e25d5db0793c" name="Changes" comment="" />
+      <created>1693251252016</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1691080928755</updated>
-      <workItem from="1691080931249" duration="95000" />
-      <workItem from="1691081499836" duration="163000" />
+      <updated>1693251252016</updated>
+      <workItem from="1693251253049" duration="4863000" />
+      <workItem from="1693260531614" duration="15999000" />
+      <workItem from="1693335113622" duration="18208000" />
+      <workItem from="1693405613444" duration="14133000" />
+      <workItem from="1693442879009" duration="435000" />
+      <workItem from="1693444174701" duration="4868000" />
+      <workItem from="1693449074549" duration="7782000" />
     </task>
     <servers />
   </component>
