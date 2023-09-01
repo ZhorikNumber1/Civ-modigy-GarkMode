@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.io.*;
 
 @Service
-public interface user_modService {
+public interface UserModService {
     static void createModFolder(String nameMod) throws IOException {
 
         String path_to_directory = "E:\\Simple-CRUD-java-app\\Mods\\" + nameMod;

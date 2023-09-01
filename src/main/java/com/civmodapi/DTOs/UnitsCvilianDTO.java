@@ -1,6 +1,6 @@
 package com.civmodapi.DTOs;
 
-public class Units_cvilianDto {
+public class UnitsCvilianDTO {
     private String name;
     private String namePhoto;
     private byte[] photoURL;
@@ -14,7 +14,7 @@ public class Units_cvilianDto {
     private int maintenance;
     private String prereqTech;
     private int Combat;
-    public Units_cvilianDto(String name, int baseMoves, int cost, int maintenance, byte[] urlPhoto, String prereqTech, int combat, long id, String unit_Type) {
+    public UnitsCvilianDTO(String name, int baseMoves, int cost, int maintenance, byte[] urlPhoto, String prereqTech, int combat, long id, String unit_Type) {
         this.name = name;
         this.cost = cost;
         this.baseMoves = baseMoves;
@@ -58,10 +58,10 @@ public class Units_cvilianDto {
         Unit_Type = unit_Type;
     }
 
-    public Units_cvilianDto() {
+    public UnitsCvilianDTO() {
     }
 
-    public Units_cvilianDto(String name, String namePhoto, String nameMod, String description, String author, Long id, int cost, int baseMoves, String unit_type, byte[] photoURL) {
+    public UnitsCvilianDTO(String name, String namePhoto, String nameMod, String description, String author, Long id, int cost, int baseMoves, String unit_type, byte[] photoURL) {
         this.name = name;
         this.namePhoto = namePhoto;
         this.nameMod = nameMod;

@@ -1,15 +1,15 @@
 package com.civmodapi.Controller.UsersControllers;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin("*")
+@RequestMapping("/user")
 public class UserController {
 
-    @GetMapping("/user")
+    @GetMapping("/1")
     public String helloUserController(){
         return "User access level";
     }

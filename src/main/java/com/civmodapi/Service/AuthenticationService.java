@@ -8,7 +8,6 @@ import com.civmodapi.Model.User;
 import com.civmodapi.Repository.RoleRepository;
 import com.civmodapi.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationManager;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -28,11 +27,6 @@ public class AuthenticationService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
-
-/*    @Autowired
-    private TokenService tokenService;*/
 
     public User registerUser(String username, String password){
 
@@ -45,23 +39,5 @@ public class AuthenticationService {
 
         return userRepository.save(new User(0, username, encodedPassword, authorities));
     }
-
-/*
-    public LoginResponseDTO loginUser(String username, String password){
-
-        try{
-            Authentication auth = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(username, password)
-            );
-
-            String token = tokenService.generateJwt(auth);
-
-            return new LoginResponseDTO(userRepository.findByUsername(username).get(), token);
-
-        } catch(AuthenticationException e){
-            return new LoginResponseDTO(null, "");
-        }
-    }
-*/
 
 }

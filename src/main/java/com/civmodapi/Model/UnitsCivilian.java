@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "units_civilian")
-public class Units_civilian {
-    public Units_civilian() {
+public class UnitsCivilian {
+    public UnitsCivilian() {
 
     }
 
-    public Units_civilian(long id, String unitType, String namePhoto, int cost, int maintenance, int baseMoves, int combat, int baseSightRange, String advisorType, int rangedCombat, int range, String name, String description, int purchaseYield, String pseudoYieldType, String prereqTech) {
+    public UnitsCivilian(long id, String unitType, String namePhoto, int cost, int maintenance, int baseMoves, int combat, int baseSightRange, String advisorType, int rangedCombat, int range, String name, String description, int purchaseYield, String pseudoYieldType, String prereqTech) {
         this.id = id;
         UnitType = unitType;
         NamePhoto = namePhoto;
@@ -47,7 +47,7 @@ public class Units_civilian {
     @Column(name = "ranged_combat", columnDefinition = "int default -1")
     private int RangedCombat;
 
-    public Units_civilian(String namePhoto, int cost, int baseMoves, String name, int id, String unitType, int combat,  int rangedCombat) {
+    public UnitsCivilian(String namePhoto, int cost, int baseMoves, String name, int id, String unitType, int combat, int rangedCombat) {
         UnitType = unitType;
         NamePhoto = namePhoto;
         this.cost = cost;

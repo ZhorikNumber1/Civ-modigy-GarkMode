@@ -1,8 +1,5 @@
 package com.civmodapi.Service;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.civmodapi.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,8 +19,6 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
-        System.out.println("In the user details service");
 
         return userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("user is not valid"));
     }

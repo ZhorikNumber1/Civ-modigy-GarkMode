@@ -1,7 +1,7 @@
 package com.civmodapi.Service;
 
-import com.civmodapi.Model.Mods_units;
-import com.civmodapi.Model.Units_civilian;
+import com.civmodapi.Model.ModsUnits;
+import com.civmodapi.Model.UnitsCivilian;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.Random;
 
 @Service
-public interface mod_textService {
+public interface ModTextService {
 
 
     static  String getId() {
@@ -42,11 +42,11 @@ public interface mod_textService {
         return stringid.toString();
     }
 
-    static String modInfoFile_text(Mods_units unitsCvilianDto) {
+    static String modInfoFile_text(ModsUnits unitsCvilianDto) {
         Date datamod_let = new Date();
         long datamod = datamod_let.getTime() / 1000;
 
-        String idXML = mod_textService.getId();
+        String idXML = ModTextService.getId();
 
         String captionXML = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<Mod id=\"" + idXML + "\" version=\"1\">";
@@ -60,10 +60,10 @@ public interface mod_textService {
         String PropertiesXML = "\n\t</Properties>";
         String Title = captionXML + nameXML + descriptionXML + dataXML + teaserXML + authorXML + CompatibleVersionsXML + PropertiesXML;
 
-        return Title + mod_textService.inGameActions(idXML, unitsCvilianDto);
+        return Title + ModTextService.inGameActions(idXML, unitsCvilianDto);
     }
 
-    static String xmlDBFile_inGameActions(Mods_units modsUnits, Optional<Units_civilian> exsting_Unit) {
+    static String xmlDBFile_inGameActions(ModsUnits modsUnits, Optional<UnitsCivilian> exsting_Unit) {
 
         String title = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 
@@ -92,7 +92,7 @@ public interface mod_textService {
         return title + finalXmltext + "/>\n" + endTextXml;
     }
 
-    static String inGameActions(String id, Mods_units unitsCvilianDto) {
+    static String inGameActions(String id, ModsUnits unitsCvilianDto) {
         String openTegXML = "\n\t<InGameActions>";
         String closeTegXML = "\n\t</InGameActions>";
         String updateDatabaseXML = "\n\t\t<UpdateDatabase id=\"" + id + "\">";

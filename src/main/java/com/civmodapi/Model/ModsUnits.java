@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "mods_units")
-public class Mods_units {
+public class ModsUnits {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -46,10 +46,10 @@ public class Mods_units {
         NameMod = nameMod;
     }
 
-    public Mods_units() {
+    public ModsUnits() {
     }
 
-    public Mods_units(Long id, String unitType, String namePhoto, int cost, int baseMoves, int maintenance, String name, String description, String prereqTech, String NameMod, String Author, int combat) {
+    public ModsUnits(Long id, String unitType, String namePhoto, int cost, int baseMoves, int maintenance, String name, String description, String prereqTech, String NameMod, String Author, int combat) {
         this.id = id;
         UnitType = unitType;
         NamePhoto = namePhoto;

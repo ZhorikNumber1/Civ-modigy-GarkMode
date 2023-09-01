@@ -1,11 +1,11 @@
 package com.civmodapi.Controller.UpdateUnit;
 
-import com.civmodapi.Model.Mods_units;
-import com.civmodapi.Model.Units_civilian;
+import com.civmodapi.Model.ModsUnits;
+import com.civmodapi.Model.UnitsCivilian;
 import com.civmodapi.Repository.UnitsRepository;
-import com.civmodapi.Repository.Mod_unitsRepository;
-import com.civmodapi.Service.mod_textService;
-import com.civmodapi.Service.user_modService;
+import com.civmodapi.Repository.ModUnitsRepository;
+import com.civmodapi.Service.ModTextService;
+import com.civmodapi.Service.UserModService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
@@ -20,24 +20,25 @@ import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
+@RequestMapping("/mod")
 public class UpdateUnitsController {
     @Autowired
     private UnitsRepository unitsRepository;
     @Autowired
-    private Mod_unitsRepository mod_unitsRepository;
+    private ModUnitsRepository mod_unitsRepository;
     @PostMapping(path = "/create_mod")
-    public String create_mod(@RequestBody Mods_units unit_Update) throws IOException {
+    public String create_mod(@RequestBody ModsUnits unit_Update) throws IOException {
 
-        Optional<Units_civilian> exsting_Unit = unitsRepository.findById(unit_Update.getId());
+        Optional<UnitsCivilian> exsting_Unit = unitsRepository.findById(unit_Update.getId());
         mod_unitsRepository.save(unit_Update);
 
-        user_modService.createModFolder(unit_Update.getNameMod());
+        UserModService.createModFolder(unit_Update.getNameMod());
         String folderPath = "E:\\Simple-CRUD-java-app\\Mods\\" + unit_Update.getNameMod();
 
-        user_modService.addTextToModInfoFile(mod_textService.modInfoFile_text(unit_Update), "E:\\Simple-CRUD-java-app\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getNameMod() + ".modinfo");
-        user_modService.addTextToModInfoFile(mod_textService.xmlDBFile_inGameActions(unit_Update, exsting_Unit), "E:\\Simple-CRUD-java-app\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getName() + unit_Update.getNameMod() + ".xml");
-        user_modService.archiveFolder(folderPath);
-        String modInfoFile = mod_textService.modInfoFile_text(unit_Update);
+        UserModService.addTextToModInfoFile(ModTextService.modInfoFile_text(unit_Update), "E:\\Simple-CRUD-java-app\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getNameMod() + ".modinfo");
+        UserModService.addTextToModInfoFile(ModTextService.xmlDBFile_inGameActions(unit_Update, exsting_Unit), "E:\\Simple-CRUD-java-app\\Mods\\" + unit_Update.getNameMod() + "\\" + unit_Update.getName() + unit_Update.getNameMod() + ".xml");
+        UserModService.archiveFolder(folderPath);
+        String modInfoFile = ModTextService.modInfoFile_text(unit_Update);
 
         return unit_Update.getNameMod();
     }
