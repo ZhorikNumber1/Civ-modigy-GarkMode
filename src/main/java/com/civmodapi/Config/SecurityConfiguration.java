@@ -27,7 +27,7 @@ public class SecurityConfiguration {
                     auth.requestMatchers("/auth/**").permitAll();
                     auth.requestMatchers("/admin/**").hasAuthority("ADMIN");
                     auth.requestMatchers("/user/**").hasAuthority("USER");
-                    auth.requestMatchers("/mod/**").hasAuthority("USER");
+                    auth.requestMatchers("/mod/**").permitAll();
 
                 }).httpBasic(Customizer.withDefaults());
         //http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));

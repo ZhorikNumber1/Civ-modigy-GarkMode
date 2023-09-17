@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f0fa301-7fc0-41bd-b421-e25d5db0793c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/DTOs/LoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/UnitsService/GetAllUnits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Service/UnitsService/GetSpecificUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/GetUnitsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UpdateUnit/GetUnitsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/civmodapi/Controller/UsersControllers/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Dockerfile" />
         <option value="Class" />
       </list>
     </option>
@@ -73,11 +79,11 @@
       <recent name="com.civmodapi.DTOs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Simple-CRUD-java-app" />
       <recent name="E:\Simple-CRUD-java-app\src\main\java\com\civmodapi\DTOs" />
       <recent name="E:\Simple-CRUD-java-app\src\main\java\com\civmodapi\Utils" />
       <recent name="E:\Simple-CRUD-java-app\src\main\java\com\civmodapi\Service" />
       <recent name="E:\Simple-CRUD-java-app\src\main\java\com\civmodapi\Controller\UsersControllers" />
-      <recent name="E:\Simple-CRUD-java-app\src\main\resources\db" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CivModApiApplication">
@@ -98,6 +104,12 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
@@ -123,7 +135,11 @@
       <workItem from="1693405613444" duration="14133000" />
       <workItem from="1693442879009" duration="435000" />
       <workItem from="1693444174701" duration="4868000" />
-      <workItem from="1693449074549" duration="8688000" />
+      <workItem from="1693449074549" duration="12312000" />
+      <workItem from="1693622942901" duration="4915000" />
+      <workItem from="1693869768800" duration="63000" />
+      <workItem from="1694205813815" duration="12888000" />
+      <workItem from="1694588891028" duration="72000" />
     </task>
     <servers />
   </component>

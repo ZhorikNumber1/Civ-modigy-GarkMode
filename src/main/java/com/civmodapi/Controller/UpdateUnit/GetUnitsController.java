@@ -4,6 +4,8 @@ import com.civmodapi.DTOs.UnitsDTO;
 import com.civmodapi.Model.UnitsCivilian;
 import com.civmodapi.DTOs.UnitsCvilianDTO;
 import com.civmodapi.Repository.UnitsRepository;
+import com.civmodapi.Service.UnitsService.GetAllUnits;
+import com.civmodapi.Service.UnitsService.GetSpecificUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,35 +20,18 @@ import java.util.List;
 @RestController
 @RequestMapping("/mod")
 public class GetUnitsController {
-    private static final String PHOTO_DIRECTORY = "E:\\Simple-CRUD-java-app\\src\\main\\java\\com\\civmodapi\\Img\\";
     @Autowired
-    private UnitsRepository unitsRepository;
+    private GetSpecificUnit getSpecificUnit;
+    @Autowired
+    private GetAllUnits getAllUnits;
 
     @GetMapping("/units")
     public List<UnitsDTO> getData() throws IOException {
-        
-        List<UnitsCivilian> units = unitsRepository.findAll();
-        List<UnitsDTO> unitsCvilianDtoList = new ArrayList<>();
-        
-        for (UnitsCivilian unit : units) {
-            
-            File imageFile = new File(PHOTO_DIRECTORY + unit.getNamePhoto());
-            byte[] urlPhoto = Files.readAllBytes(imageFile.toPath());
-            UnitsDTO dto = new UnitsDTO(unit.getName(), urlPhoto, unit.getUnitType());
-            unitsCvilianDtoList.add(dto);
-        }
-        return unitsCvilianDtoList;
+        return getAllUnits.getAllUnits();
     }
 
     @GetMapping("/units/{name}")
-    public UnitsCvilianDTO getUnitsbyname(@PathVariable String name) throws IOException {
-        
-        UnitsCivilian units;
-        units = unitsRepository.findByName(name);
-        
-        File imageFile = new File(PHOTO_DIRECTORY + units.getNamePhoto());
-        byte[] urlPhoto = Files.readAllBytes(imageFile.toPath());
-        UnitsCvilianDTO specificUnit = new UnitsCvilianDTO(units.getName(), units.getBaseMoves(), units.getCost(), units.getMaintenance(), urlPhoto, units.getPrereqTech(), units.getCombat(), units.getId(), units.getUnitType());
-        return specificUnit;
+    public UnitsCvilianDTO getUnitsByName(@PathVariable String name) throws IOException {
+        return getSpecificUnit.getUnit(name);
     }
 }
